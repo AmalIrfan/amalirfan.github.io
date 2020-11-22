@@ -1,0 +1,166 @@
+:root {
+  --primaryColor: #eaeaea;
+  --secondaryColor: #fefefe;
+
+  --borderColor: #d0d0d0;
+
+  --strongTextColor: #242833;
+  --textColor: #43495c;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--strongTextColor);
+  font-family: "Arvo", serif;
+  font-weight: 900;
+}
+
+strong,
+em,
+small {
+  color: var(--strongTextColor);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4397eb;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.6rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 1.2rem;
+}
+
+.s1,
+.s2 {
+  overflow: auto;
+  border: 1px solid var(--borderColor);
+}
+
+.s1 {
+  background-color: var(--primaryColor);
+}
+.s2 {
+  background-color: var(--secondaryColor);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.greetingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introContainer {
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
+  min-height: 60vh;
+  border-radius: 5px 5px 0 0;
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 8vh 1fr;
+  grid-template-areas:
+    "navContainer navContainer"
+    "leftColumn rightColumn";
+}
+
+.navContainer {
+  display: flex;
+  grid-area: navContainer;
+  border-bottom: 1px solid var(--borderColor);
+  border-radius: 4px 4px 0 0;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primaryColor);
+}
+
+.leftColumn {
+  grid-area: leftColumn;
+}
+
+.rightColumn {
+  grid-area: rightColumn;
+}
+
+.dotsContainer {
+  display: flex;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid var(--borderColor);
+
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  box-shadow: -2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+}
+
+.dot1 {
+  background-color: var(--primaryColor);
+}
+
+.dot2 {
+  background-color: var(--secondaryColor);
+}
+
+.dot3 {
+  background-color: #99eebb;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
