@@ -1,22 +1,24 @@
 :root {
-  --primaryColor: #eaeaea;
-  --secondaryColor: #fefefe;
+    --primaryColor: #eaeaea;
+    --secondaryColor: #fefefe;
 
-  --borderColor: #d0d0d0;
+    --borderColor: #d0d0d0;
 
-  --strongTextColor: #242833;
-  --textColor: #43495c;
+    --strongTextColor: #242833;
+    --textColor: #43495c;
+
+    --accentColor: #6e6eff;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  color: var(--textColor);
+    font-family: "Poppins", sans-serif;
+    color: var(--textColor);
 }
 
 h1,
@@ -25,142 +27,205 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--strongTextColor);
-  font-family: "Arvo", serif;
-  font-weight: 900;
+    color: var(--strongTextColor);
+    font-family: "Arvo", serif;
+    font-weight: 900;
 }
 
 strong,
 em,
 small {
-  color: var(--strongTextColor);
+    color: var(--strongTextColor);
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
-  color: #4397eb;
+    text-decoration: none;
+    color: var(--accentColor);
 }
 
 h1 {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
 }
 h2 {
-  font-size: 2.6rem;
+    font-size: 2.6rem;
 }
 h3 {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 h4 {
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 }
 h5 {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 h6 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .s1,
 .s2 {
-  overflow: auto;
-  border: 1px solid var(--borderColor);
+    overflow: auto;
+    border: 1px solid var(--borderColor);
 }
 
 .s1 {
-  background-color: var(--primaryColor);
+    background-color: var(--primaryColor);
 }
 .s2 {
-  background-color: var(--secondaryColor);
+    background-color: var(--secondaryColor);
 }
 
 .container {
-  width: 90%;
-  margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .greetingContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .introContainer {
-  background-color: var(--secondaryColor);
-  border: 1px solid var(--borderColor);
-  min-height: 60vh;
-  border-radius: 5px 5px 0 0;
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    min-height: 60vh;
+    border-radius: 5px 5px 0 0;
+    box-shadow: -1px 1px 3px -1px #000000bf;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 8vh 1fr;
-  grid-template-areas:
-    "navContainer navContainer"
-    "leftColumn rightColumn";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8vh 1fr;
+    grid-template-areas:
+        "navContainer navContainer"
+        "leftColumn rightColumn";
 }
 
 .navContainer {
-  display: flex;
-  grid-area: navContainer;
-  border-bottom: 1px solid var(--borderColor);
-  border-radius: 4px 4px 0 0;
-  padding: 0 1rem;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primaryColor);
+    display: flex;
+    grid-area: navContainer;
+    border-bottom: 1px solid var(--borderColor);
+    border-radius: 4px 4px 0 0;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
 }
 
 .leftColumn {
-  grid-area: leftColumn;
+    grid-area: leftColumn;
+    display: grid;
 }
 
 .rightColumn {
-  grid-area: rightColumn;
+    grid-area: rightColumn;
+    display: grid;
 }
 
 .dotsContainer {
-  display: flex;
+    display: flex;
 }
 
 .dot {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
 
-  background-color: black;
-  border-radius: 50%;
-  border: 2px solid var(--borderColor);
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid var(--borderColor);
 
-  cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
 
-  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
 .dot:hover {
-  transform: scale(1.2);
-  box-shadow: -2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+    box-shadow: -2px 2px 3px -1px rgba(0, 0, 0, 0.5);
 }
 
 .dot1 {
-  background-color: var(--primaryColor);
+    background-color: var(--primaryColor);
 }
 
 .dot2 {
-  background-color: var(--secondaryColor);
+    background-color: var(--secondaryColor);
 }
 
 .dot3 {
-  background-color: #99eebb;
+    background-color: #99eebb;
+}
+
+.profilePic {
+    align-self: center;
+    justify-self: center;
+    height: 200px;
+}
+
+.infoContainer {
+    align-self: center;
+    justify-self: center;
+    height: max-content;
+    width: max-content;
+    position: relative;
+}
+
+.infoContainer::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #838383;
+    height: 100%;
+    width: 100%;
+}
+
+.info {
+    border: 1.5px solid var(--accentColor);
+    position: relative;
+    background-color: #fffe;
+    padding: 1rem;
+}
+
+.info .corner {
+    border: inherit;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    display: block;
+    background-color: #fff;
+}
+
+.tl {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+.tr {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+.bl {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+}
+.br {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
 }
 
 @media screen and (max-width: 1200px) {
-  .container {
-    width: 95%;
-  }
+    .container {
+        width: 95%;
+    }
 }
