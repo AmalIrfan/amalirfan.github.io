@@ -1,87 +1,6 @@
-:root {
-    --primaryColor: #eaeaea;
-    --secondaryColor: #fefefe;
+@import url("main.css");
 
-    --borderColor: #d0d0d0;
-
-    --strongTextColor: #242833;
-    --textColor: #43495c;
-
-    --accentColor: #6e6eff;
-}
-
-html,
-body {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    color: var(--textColor);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--strongTextColor);
-    font-family: "Arvo", serif;
-    font-weight: 900;
-}
-
-strong,
-em,
-small {
-    color: var(--strongTextColor);
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: var(--accentColor);
-}
-
-h1 {
-    font-size: 3.5rem;
-}
-h2 {
-    font-size: 2.6rem;
-}
-h3 {
-    font-size: 2rem;
-}
-h4 {
-    font-size: 1.8rem;
-}
-h5 {
-    font-size: 1.4rem;
-}
-h6 {
-    font-size: 1.2rem;
-}
-
-.s1,
-.s2 {
-    border: 1px solid var(--borderColor);
-}
-
-.s1 {
-    background-color: var(--primaryColor);
-}
-.s2 {
-    background-color: var(--secondaryColor);
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
+/* First Section */
 
 .greetingContainer {
     display: flex;
@@ -98,7 +17,7 @@ h6 {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8vh 1fr;
+    grid-template-rows: 1fr 9fr;
     grid-template-areas:
         "navContainer navContainer"
         "leftColumn rightColumn";
@@ -108,21 +27,24 @@ h6 {
     display: flex;
     grid-area: navContainer;
     border-bottom: 1px solid var(--borderColor);
-    border-radius: 4px 4px 0 0;
+    border-radius: 5px 5px 0 0;
     padding: 0 1rem;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primaryColor);
 }
 
+.leftColumn,
+.rightColumn {
+    display: grid;
+}
+
 .leftColumn {
     grid-area: leftColumn;
-    display: grid;
 }
 
 .rightColumn {
     grid-area: rightColumn;
-    display: grid;
 }
 
 .dotsContainer {
@@ -142,12 +64,12 @@ h6 {
     cursor: pointer;
     transition: transform 0.1s ease, box-shadow 0.2s ease, border 0.1s ease;
 
-    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px #000000bf;
 }
 
 .dot:hover {
     transform: scale(1.2);
-    box-shadow: -2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 2px 3px -1px #0008;
 }
 
 .dot:active {
@@ -155,11 +77,11 @@ h6 {
 }
 
 .dot1 {
-    background-color: var(--primaryColor);
+    background-color: #eaeaea;
 }
 
 .dot2 {
-    background-color: var(--secondaryColor);
+    background-color: #575757;
 }
 
 .dot3 {
@@ -170,7 +92,10 @@ h6 {
     align-self: center;
     justify-self: center;
     height: 200px;
+    color: var(--strongTextColor);
 }
+
+/* InfoContainer the box with 'What I do' in it */
 
 .infoContainer {
     align-self: center;
@@ -180,12 +105,16 @@ h6 {
     position: relative;
 }
 
+.info > h3 {
+    margin: 0.5rem 0;
+}
+
 .infoContainer::before {
     content: "";
     position: absolute;
     top: -20px;
     left: -20px;
-    background-color: #838383;
+    background-color: var(--infoShadow);
     height: 100%;
     width: 100%;
 }
@@ -193,8 +122,9 @@ h6 {
 .info {
     border: 1.5px solid var(--accentColor);
     position: relative;
-    background-color: #fffe;
+    background-color: var(--infoBg);
     padding: 1rem;
+    width: 250px;
 }
 
 .info .corner {
@@ -227,20 +157,33 @@ h6 {
     right: -5px;
 }
 
-@media screen and (max-width: 1200px) {
-    .container {
-        width: 95%;
-    }
-}
-
 @media screen and (max-width: 700px) {
     .introContainer {
         grid-template-areas:
-            "navContainer navContainer"
-            "leftColumn leftColumn"
-            "rightColumn rightColumn";
+            "navContainer"
+            "leftColumn"
+            "rightColumn";
         min-height: 90vh;
         grid-template-rows: 8vh 1fr 1fr;
+        grid-template-columns: 1fr;
         padding-bottom: 1rem;
     }
+}
+
+/* About Section */
+.aboutContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.expertiseList {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    background-color: var(--infoShadow);
+    margin-bottom: 1rem;
+}
+
+.expertiseList ul {
+    padding: 0;
 }

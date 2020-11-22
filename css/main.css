@@ -1,0 +1,99 @@
+:root {
+    --primaryColor: #eaeaea;
+    --secondaryColor: #fefefe;
+
+    --borderColor: #d0d0d0;
+
+    --strongTextColor: #242833;
+    --textColor: #43495c;
+
+    --accentColor: #6e6eff;
+
+    --infoBg: #fffd;
+    --infoShadow: #ccce;
+}
+
+.dark {
+    --primaryColor: #575757;
+    --secondaryColor: #999;
+
+    --borderColor: #22242c;
+
+    --strongTextColor: #fafafa;
+    --textColor: #eee;
+
+    --accentColor: #40c9ff;
+
+    --infoBg: #999e;
+    --infoShadow: #555e;
+}
+
+.green {
+    --primaryColor: #425a4a;
+    --secondaryColor: #6b8061;
+
+    --borderColor: #232c22;
+
+    --strongTextColor: #f8f6f1;
+    --textColor: #eaecec;
+
+    --accentColor: #40c9ff;
+
+    --infoBg: #9cae;
+    --infoShadow: #596e;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--strongTextColor);
+    font-family: "Arvo", serif;
+    font-weight: 900;
+}
+
+strong,
+em,
+small {color: var(--strongTextColor);}
+
+li {list-style: none;}
+
+a {
+    text-decoration: none;
+    color: var(--accentColor);
+}
+
+h1 {font-size: 3.5rem;}
+h2 {font-size: 2.6rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.8rem;}
+h5 {font-size: 1.4rem;}
+h6 {font-size: 1.2rem;}
+
+.s1,
+.s2 {border: 1px solid var(--borderColor);}
+
+.s1 {background-color: var(--primaryColor);}
+.s2 {background-color: var(--secondaryColor);}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {width: 95%;}
+}
