@@ -68,7 +68,6 @@ h6 {
 
 .s1,
 .s2 {
-    overflow: auto;
     border: 1px solid var(--borderColor);
 }
 
@@ -93,7 +92,7 @@ h6 {
 .introContainer {
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);
-    min-height: 60vh;
+    min-height: 70vh;
     border-radius: 5px 5px 0 0;
     box-shadow: -1px 1px 3px -1px #000000bf;
 
@@ -141,7 +140,7 @@ h6 {
     border: 2px solid var(--borderColor);
 
     cursor: pointer;
-    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    transition: transform 0.1s ease, box-shadow 0.2s ease, border 0.1s ease;
 
     box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
@@ -149,6 +148,10 @@ h6 {
 .dot:hover {
     transform: scale(1.2);
     box-shadow: -2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+}
+
+.dot:active {
+    border-color: var(--accentColor);
 }
 
 .dot1 {
@@ -227,5 +230,17 @@ h6 {
 @media screen and (max-width: 1200px) {
     .container {
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .introContainer {
+        grid-template-areas:
+            "navContainer navContainer"
+            "leftColumn leftColumn"
+            "rightColumn rightColumn";
+        min-height: 90vh;
+        grid-template-rows: 8vh 1fr 1fr;
+        padding-bottom: 1rem;
     }
 }
