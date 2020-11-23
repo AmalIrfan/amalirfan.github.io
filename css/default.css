@@ -409,15 +409,22 @@ h6 {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
     #preview-shadow {
         max-width: 280px;
-        height: 180px;
+        height: 200px;
         padding-left: 10px;
         padding-top: 10px;
     }
 
     #preview {
-        width: 280px;
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #preview,
+    #preview-shadow {
+        width: auto;
     }
 }
