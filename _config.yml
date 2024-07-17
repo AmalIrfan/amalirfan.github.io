@@ -1,4 +1,4 @@
 title: Amal's Webpage
 description: A small personal website hosting few pages.
 
-remote_theme: pages/time-machine@v0.2.0
+remote_theme: jekyll-theme-time-machine
