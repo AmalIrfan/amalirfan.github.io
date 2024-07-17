@@ -1,4 +1,11 @@
+remote_theme: pages/time-machine@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
 title: Amal's Webpage
 description: A small personal website hosting few pages.
+<<<<<<< HEAD
 
 remote_theme: jekyll-theme-time-machine
+=======
+>>>>>>> parent of 071c8f9 (Trying to make _config.yml work)
