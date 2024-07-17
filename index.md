@@ -1,4 +1,9 @@
-Hi! This is Amal's Webpage
-==========================
+Amal Irfan
+==========
 
-I wanted to see if I could use md instead of html.
+Yep! That's me
+--------------
+
+Pages:
+
+- [Blogs](blogs)
