@@ -1,9 +1,10 @@
-Amal Irfan
-==========
+Welcome to Amal's Webpage
+=========================
 
-Yep! That's me
---------------
+[Who am I?](about)
+------------------
 
 Pages:
 
 - [Blogs](blogs)
+- [About](about)
