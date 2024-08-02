@@ -8,6 +8,15 @@
 		<meta name="description" content="{{ page.description }}"/>
 	</head>
 	<body>
-		{{ content }}
+		<header>
+			<p><a href="#main">skiplinks</a></p>
+			{{ page.header }}
+		</header>
+		<main id="main">
+			{{ content }}
+		</main>
+		<footer>
+			{{ page.footer }}
+		</footer>
 	</body>
 </html>

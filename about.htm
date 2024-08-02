@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<link rel="icon" type="image/svg+xml" href="/imgs/icon.svg"/>
-		<title>About Amal Irfan</title>
-		<meta name="description" content="About webmaster of this website"/>
-		<meta name="author" content="Amal Irfan"/>
-		<meta name="viewport" content="width=device-width"/>
-	</head>
-	<body>
-		<header>
-			<p><a href="#main">skiplinks</a></p>
-			<p>Links:</p>
-			<ul>
-				<li><a href="..">home</a></li>
-			</ul>
-		</header>
-		<main id="main">
-			<h1>Hi, I am Amal Irfan.</h1>
-			<p>I am persuing my bachloer's degree right now.<br/>
-			   I made this website as hobby. If you want, checkout my
-			   <a href="blogs/">blogs</a>.</p>
-		</main>
-		<footer>
-			<p>Copyright &copy; Amal Irfan 2024</p>
-		</footer>
-	</body>
-</html>
+---
+layout: default
+title: About Amal Irfan
+description: About webmaster of this website
+---
+{% capture header %}
+<p>Links:</p>
+<ul>
+	<li><a href="..">home</a></li>
+</ul>
+{% endcapture %}
+<h1>Hi, I am Amal Irfan.</h1>
+<p>I am persuing my bachloer's degree right now.<br/>
+   I made this website as hobby. If you want, checkout my
+   <a href="blogs/">blogs</a>.</p>
+{% capture footer %}
+<p>Copyright &copy; Amal Irfan 2024</p>
+{% endcapture %}
