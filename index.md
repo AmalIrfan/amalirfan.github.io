@@ -3,13 +3,11 @@ layout: default
 title: Amal's Website
 description: A little website run by Amal Irfan
 header: |
-  <p>Links:</p>
-  <ul>
-    <li><a href="blogs/">blogs</a></li>
-    <li><a href="about.md">about</a></li>
-  </ul>
+  Links:
+  - [blogs](blogs/)
+  - [about](about.md)
 footer: |
-  <p>Copyright &copy; *Amal Irfan* 2024</p>
+  Copyright &copy; Amal Irfan 2024
 ---
 
 # Welcome to Amal's Website!

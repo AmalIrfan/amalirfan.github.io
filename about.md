@@ -3,10 +3,8 @@ layout: default
 title: About Amal Irfan
 description: About webmaster of this website
 header: |
-  <p>Links:</p>
-  <ul>
-  <li><a href="..">home</a></li>
-  </ul>
+  Links:
+  - [home](..)
 footer: |
   <p>Copyright &copy; Amal Irfan 2024</p>
 ---

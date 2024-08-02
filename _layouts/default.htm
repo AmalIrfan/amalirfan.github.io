@@ -10,13 +10,13 @@
 	<body>
 		<header>
 			<p><a href="#main">skiplinks</a></p>
-			{{ page.header }}
+			{{ page.header | markdownify }}
 		</header>
 		<main id="main">
 			{{ content }}
 		</main>
 		<footer>
-			{{ page.footer }}
+			{{ page.footer | markdownify }}
 		</footer>
 	</body>
 </html>
