@@ -5,7 +5,7 @@ description: A little website run by Amal Irfan
 header: |
   Links:
   - [blogs](blogs/)
-  - [about](about.md)
+  - [about]({% link about.md %})
 footer: |
   Copyright &copy; Amal Irfan 2024
 ---
