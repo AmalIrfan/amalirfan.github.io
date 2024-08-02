@@ -12,12 +12,17 @@ footer: |
 
 # Welcome to Amal's Blogs
 
-I haven't posted anything yet, this is an empty index right now.<br/>
-Here is a picture of a kitten for compensation:
-
-![Picture of a kitten from Wikipedia.](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Persian_Cat_%28kitten%29.jpg/250px-Persian_Cat_%28kitten%29.jpg)
-
 ## Latest blogs:
+
+- ### How I made this website?
+
+  I thought it would be a nice first blog: explaining what went into making this website.
+
+  Why does this website looks so plain? Isn't this just html pages? Wouldn't managing all that be a nightmare?
+
+  I will go through them, but one at a time.
+
+  [read more](how_this_website_was_made.md)
 
 - ### Starting Gardening
 
