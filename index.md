@@ -6,10 +6,10 @@ header: |
   <p>Links:</p>
   <ul>
     <li><a href="blogs/">blogs</a></li>
-    <li><a href="about.htm">about</a></li>
+    <li><a href="about.md">about</a></li>
   </ul>
 footer: |
-  <p>Copyright &copy; Amal Irfan 2024</p>
+  <p>Copyright &copy; *Amal Irfan* 2024</p>
 ---
 
 # Welcome to Amal's Website!
