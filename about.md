@@ -10,7 +10,8 @@ header: |
 footer: |
   <p>Copyright &copy; Amal Irfan 2024</p>
 ---
-<h1>Hi, I am Amal Irfan.</h1>
-<p>I am persuing my bachloer's degree right now.<br/>
-   I made this website as hobby. If you want, checkout my
-   <a href="blogs/">blogs</a>.</p>
+
+# Hi, I am Amal Irfan.
+
+I am persuing my bachloer's degree right now.<br/>
+I made this website as hobby. If you want, checkout my [blogs](blogs/).

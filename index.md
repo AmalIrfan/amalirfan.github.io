@@ -11,7 +11,8 @@ header: |
 footer: |
   <p>Copyright &copy; Amal Irfan 2024</p>
 ---
-<h1>Welcome to Amal's Website!</h1>
-<p>If you want, checkout my <a href="blogs/">blogs</a>.
-<br/>
-Or know <a href="about.htm">about</a> me.</p>
+
+# Welcome to Amal's Website!
+
+If you want, checkout my [blogs](blogs/).<br/>
+Or know [about](about.md) me.
