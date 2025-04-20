@@ -8,8 +8,8 @@ description: >
   the domain name)
 header: |
   Links:
-  - [home](..)
-  - [garden](garden/)
+  - [blogs](..)
+  - [garden](/blogs/garden/)
 footer: |
   Copyright &copy; Amal Irfan 2024
 ---
