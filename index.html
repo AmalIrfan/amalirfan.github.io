@@ -1,33 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width"/>
-    <title>Hi, I am Amal!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amal's Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
+      :root {
+        font-size: 62.5%;
+      }
       body {
-        margin: 0rem 1rem;
+        font-family: "Atkinson Hyperlegible", sans-serif;
+        margin-block: 1rem;
+        line-height: 2.5rem;
+        margin-inline: max(1rem, 50% - 800px / 2);
+        font-size: 1.8rem;
+      }
+      code,
+      pre,
+      samp,
+      kbd,
+      var {
+        font-family: "Atkinso Hyperlegible Mono", monospace;
+        font-size: inherit;
+        background-color: #f0f0f0;
+        padding-inline: 0.5ex;
+        &:not(pre) {
+          display: inline-block;
+        }
+      }
+      pre {
+        user-select: text;
+        box-sizing: border-box;
+        padding: 1ex;
+        margin: 0;
+        overflow: auto;
+      }
+      .nums {
+        display: inline-block;
+        user-select: none;
+        border-right: 1px solid #a0a0a0;
+        padding-inline-end: 0.5ex;
+      }
+      .code {
+        display: flex;
+        & > pre:not(.nums) {
+          flex: 1;
+        }
+      }
+      h1 {
+        margin: 4rem 0 3rem 0;
+        font-size: 4rem;
+      }
+      h2 {
+        margin: 3rem 0 2rem 0;
+        font-size: 3rem;
+      }
+      h3 {
+        margin: 2.5rem 0 1rem 0;
+        font-size: 2.4rem;
+      }
+      p {
+        margin-block: 0.5em;
+        margin-inline: 0;
+      }
+      footer {
+        margin-block: 2rem;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Hi, I am Amal!</h1>
-    </header>
-    <main>
-      <p>Some of my recent projects:
-        <ul>
-          <li>popa: <a href="//github.com/AmalIrfan/popa">github.com/AmalIrfan/popa</a></li>
-          <li>ptech: <a href="//github.com/AmalIrfan/ptech">github.com/AmalIrfan/ptech</a></li>
-        </ul>
-      </p>
-      <p>Contact me:
-        <ul>
-          <li><a href="https://in.linkedin.com/in/amal-irfan-k-c-470556318?trk=people-guest_people_search-card">Linkedin</a></li>
-        </ul>
-      </p>
-    </main>
+    <h1>Hello Lovely World!</h1>
+    <h2>Hi, I am Amal.</h2>
+    <p>
+      Here is a <code>Hello World</code> program written in x64 GNU assembly
+      using Linux syscalls
+    </p>
+    <div class="code">
+      <pre>
+.text 
+  .global _start
+
+  _start:
+    mov $1, %rax
+    mov $1, %rdi
+    lea msg(%rip), %rsi
+    mov $len, %rdx
+    syscall
+
+    mov $60, %rax
+    mov $0, %rdi
+    syscall
+    
+  msg:
+    .ascii "Hello, World!\n"
+
+  len = . - msg</pre>
+    </div>
+    <h3>Socials</h3>
+    <ul>
+      <li><a href="//github.com/AmalIrfan">Github</a></li>
+      <li>
+        <a
+          href="https://in.linkedin.com/in/amal-irfan-k-c-470556318?trk=people-guest_people_search-card"
+          >Linkedin</a
+        >
+      </li>
+    </ul>
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".code").forEach((c) => {
+          let nums = `<pre class="nums">`;
+          let l = c.querySelector("pre").innerText.split("\n").length;
+          let w = String(l).length;
+          for (let i = 1; i <= l; i++) {
+            nums += String(i).padStart(w);
+            nums += "\n";
+          }
+          nums += "</pre>";
+          c.insertAdjacentHTML("afterbegin", nums);
+        });
+      });
+    </script>
     <footer>
-      <p>Copyright &copy; Amal Irfan K C 2025</p>
+      &copy; Amal Irfan K C 2025.
+      <br />
+      License:
+      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      <br />
+      <div style="display: flex">
+        <span>Typeface:&nbsp;</span>
+        <div>
+          Atkinson Hyperlegible &amp;
+          <br />
+          Atkinson Hyperlegible Mono by
+          <a href="https://brailleinstitute.org/freefont">Braille Institute</a>,
+          under the SIL Open Font License.
+        </div>
+      </div>
     </footer>
   </body>
 </html>
